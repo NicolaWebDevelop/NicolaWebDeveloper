@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>webnicoladesign</title>
+    <base href="/NicolaWebDeveloper/">
     <meta name="robots" content="noindex, follow">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,9 +30,13 @@ publicKey: "wjNhjw3fZZ_2CYTYb",
 })();
 </script>
 <script src="assets/js/script.js"></script>
-
-<base href="/NicolaWebDeveloper/">
-
+<script>
+    if (window.location.hostname.includes('github.io')) {
+      const base = document.createElement('base');
+      base.href = '/NicolaWebDeveloper/';
+      document.head.appendChild(base);
+    }
+  </script>
 
 </head>
 
